@@ -4,8 +4,7 @@ services:
   container_name: jupyterLab
   volumes:
    - jupyter-data:/home/jovyan/work
-  command:
-   - start-notebook.py --NotebookApp.token='hatamoto'
+  command: start-notebook.py --NotebookApp.token='hatamoto'
 
 volumes:
  jupyter-data:
