@@ -1,0 +1,9 @@
+# Override for adding traefik labels
+
+services:
+ jupyter:
+  labels:
+   - "traefik.enable=true"
+   - "traefik.http.routers.jupyter.rule=Host(`jupyter.hatamoto.uk`)"
+   - "traefik.http.routers.jupyter.entrypoints=websecure"
+   - "traefik.http.routers.tls.certresolver=myresolver"
