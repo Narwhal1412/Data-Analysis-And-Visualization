@@ -7,3 +7,8 @@ services:
    - "traefik.http.routers.jupyter.rule=Host(`jupyter.hatamoto.uk`)"
    - "traefik.http.routers.jupyter.entrypoints=websecure"
    - "traefik.http.routers.tls.certresolver=myresolver"
+ networks:
+  - komodo_default
+networks:
+ komodo_default:
+  external: true
