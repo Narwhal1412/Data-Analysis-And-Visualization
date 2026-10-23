@@ -4,7 +4,8 @@ services:
   container_name: jupyterLab
   volumes:
    - jupyter-data:/home/jovyan/work
-  command: start-notebook.py --NotebookApp.token='hatamoto'
+  # Blank token, for no password
+  command: start-notebook.py --NotebookApp.token=''
 
 volumes:
  jupyter-data:
